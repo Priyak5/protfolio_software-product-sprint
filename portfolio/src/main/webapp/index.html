@@ -1,18 +1,243 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+<html lang ="en">
+<head>
+
+    <!-- import statements -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- end import statements -->
+    <title>Priya Kaushal</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!-- mobile friendly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- character set for arrows in gallery -->
+    <meta charset="utf-8">
+</head>
+
+
+
+
+<body>
+<!-- Creating the navigation bar at the top of the webpage -->
+    <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Priya Kaushal Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#top">Top</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#about">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#projects">My Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#photos">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#connect">Connect with me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Top area of the website -->
+    <div class="top"> </div>
+
+
+    <!-- About me section -->
+    <div id="about" class="about-container section-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-7 about-box">
+                    <div class="about-box-text">
+                        <h3>About Me</h3>
+                        <p class="medium-paragraph">
+                            I am a CSE fourth year student from IIIT Delhi. I have always had interest in technology, something about improving the world using current technologies be it software development or machine learning,has always inspired me. I like designing applications and working with edge devices.
+                        </p>
+                        <p>
+                            My non academic interests include any form of creative art like painting, drawing, digital art and even editing videos. I really like exercising and working out and I am also a big time foodie.
+
+                        </p>
+                        <p>
+                             I wish to travel all around the world one day and develop technologies to help everyone.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 about-box">
+                    <div class="about-box-img">
+                        <img src="Images/IMG_5111(1).jpg" alt="about" data-at2x="Images/IMG_5111(1).jpg" height="300px" width="400px">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+
+    <br>
+    <!-- About my projects -->
+    <div id="projects" class="portfolio-container section-container">
+        <div class="container">
+            <div class="row">
+                <div class="col portfolio section-description">
+                    <h2>My Projects</h2>
+                    <div class="divider-1"><span></span></div>
+                    <p>My 3 recent projects. Check them out!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 portfolio-box">
+                    <div class="portfolio-box-image">
+                        <img src="Images/12.jpg" alt="" data-at2x="Images/12.jpg" height="200px" width="300px">
+                    </div>
+                    <h3>Jarvis: Real time gun detection  </h3>
+                    <div class="portfolio-box-date">April 2020</div>
+                    <p>Developed a YOLO architecture based weapon detection system to equip surveillance cameras to detect offensive weapons and send
+                    real-time location and image results to the police through an application</p>
+                </div>
+                <div class="col-md-4 portfolio-box">
+                    <div class="portfolio-box-image">
+                        <img src="Images/voice_controlled_smart_home.jpg" alt="" data-at2x="Images/voice_controlled_smart_home.jpg" height="200px" width="200px">
+                    </div>
+                    <h3>VMouse : Voice controlled mouse</h3>
+                    <div class="portfolio-box-date">May 2020</div>
+                    <p>Developed a prototype bonsai based application of a voice based digital assistant to accept voice commands and perform GUI based actions</p>
+                </div>
+                <div class="col-md-4 portfolio-box">
+                    <div class="portfolio-box-image">
+                        <img src="Images/data_quality.png" alt="" data-at2x="Images/data_quality.png" height="200px" width="200px">
+                    </div>
+                    <h3>Data Quality and Privacy analyser </h3>
+                    <div class="portfolio-box-date">January 2020</div>
+                    <p>Devised a platform to determine the reliability and quality of a dataset for user application.</p>
+                </div>
+            </div>
+            </div>
+    </div>
+    <br><br>
+
+    <!-- Photo gallery-->
+    <div id="photos" class="image-container">
+      <h2><center>Few Memories</center></h2>  
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+          <li data-target="#myCarousel" data-slide-to="5"></li>
+          <li data-target="#myCarousel" data-slide-to="6"></li>
+          <li data-target="#myCarousel" data-slide-to="7"></li>
+          <li data-target="#myCarousel" data-slide-to="8"></li>
+          <li data-target="#myCarousel" data-slide-to="9"></li>
+        </ol>
+
+        <!-- Adding all images -->
+
+        <div class="carousel-inner">
+           <div class="item active">
+                <img src="Images/first.jpg"alt="aa">
+            </div>
+            <div class="item">
+                <img src="Images/seventh.jpg" alt="ee">
+            </div>
+            <div class="item">
+                <img src="Images/second.jpg" alt="bb">
+            </div>
+            <div class="item">
+                <img src="Images/third.jpg"alt="cc">
+            </div>
+            <div class="item">
+                <img src="Images/fourth.jpg"alt="dd">
+            </div>
+            <div class="item">
+                <img src="Images/fifth.jpg" alt="ee">
+            </div>
+            <div class="item">
+                <img src="Images/sixth.jpg" alt="ee">
+            </div>
+                <div class="item">
+                <img src="Images/8.jpg" alt="ee">
+            </div>
+            <div class="item">
+                <img src="Images/9.jpg" alt="ee">
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <!-- footer with connection details -->
+    <footer id="connect" class="footer_area p_120">
+                <div class="container">
+                    <div class="row footer_inner">
+                        <div class="col-lg-5 col-sm-6">
+                            <aside class="f_widget ab_widget">
+                                <div class="f_title">
+                                    <h3>Visit Again!</h3>
+                                </div>
+                                <p>
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | by Priya Kaushal
+    </p>
+                            </aside>
+                        </div>
+                        <div class="col-lg-5 col-sm-6">
+                            <aside class="f_widget news_widget">
+                                <div class="f_title">
+                                    <h3>Contact me</h3>
+                                    <li><a href="mailto:priyakaushal100@gmail.com"><i class="lnr lnr-envelope"></i> priyakaushal100@gmail.com</a></li>
+                                            
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-lg-2">
+                            <aside class="f_widget social_widget">
+                                <div class="f_title">
+                                    <h3>Follow Me</h3>
+                                </div>
+                                <p>Let's connect on social media!</p>
+                                <ul class="list">
+                                        <li><a href="https://www.facebook.com/priya.kaushal.3956"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://www.instagram.com/priya556/"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/in/priya-kaushal-8718a6151"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="https://github.com/Priyak5"><i class="fa fa-github"></i></a></li>   
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+    <!-- imports -->
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script type="text/javascript" src="/jquery.backstretch.min.js"></script>;
+
+</body>
 </html>
+
